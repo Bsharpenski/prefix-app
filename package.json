@@ -1,0 +1,24 @@
+{
+  "name": "prefix-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bsharpenski/prefix-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bsharpenski/prefix-app/issues"
+  },
+  "homepage": "https://github.com/Bsharpenski/prefix-app#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "knex": "^3.1.0",
+    "pg": "^8.14.1"
+  }
+}
