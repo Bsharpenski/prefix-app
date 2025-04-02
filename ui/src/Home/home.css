@@ -1,0 +1,8 @@
+#product-container{
+    list-style: none;
+    display:inline-block;
+    border: 2px solid white;
+    padding:20px;
+    margin: 5%;
+    max-width: 200px;
+}
