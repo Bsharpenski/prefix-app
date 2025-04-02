@@ -1,5 +1,6 @@
 import {useEffect, useState} from 'react'
 import './home.css'
+
 export default function Home() {
 const [items, setItems] = useState([]);
 const [results, setResults] = useState([]);
