@@ -1,13 +1,13 @@
 .product-container{
     list-style: none;
     display: inline-block;
-    border: 2px solid white;
+    border: 2px solid rgba(255, 255, 255, 0.397);
     padding:20px;
-    margin: 10px;
-    width: 200px;
+    margin: 5px;
+    width: 300px;
     height: 300px;
     height:12rem;
-    background-color: rgba(15, 125, 153, 0.767);
+    background-color: rgba(15, 125, 153, 0.616);
     border-radius: 15px;
     overflow-y: scroll;
     scrollbar-color: rgba(128, 128, 128, 0.205) transparent; 

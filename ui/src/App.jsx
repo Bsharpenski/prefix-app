@@ -8,11 +8,13 @@ import Login from './Login/login.jsx'
 import Navbar from './navbar/navbar.jsx'
 import Signup from './Login/signup.jsx'
 
+
 function App() {
   
 
   return (
     <>
+   
     <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>}/>
@@ -21,6 +23,7 @@ function App() {
         <Route path='/login' element={<Login/>}/>
         <Route path='/signup' element={<Signup/>}/>
       </Routes>
+    
     </>
   )
 }
