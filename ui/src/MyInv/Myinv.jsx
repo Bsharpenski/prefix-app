@@ -1,7 +1,9 @@
 import './myinv.css'
-import {useEffect, useState} from 'react'
+import {useEffect, useState, useContext} from 'react'
+import {AuthContext} from '../Login/authcontext.jsx'
 
 export default function Myinv() {
+const {user} =useContext(AuthContext)
 const [joined, setJoined] = useState([]);
 const [results, setResults] = useState([]);
 
@@ -9,10 +11,12 @@ useEffect(() => {
     fetch("http://localhost:3001/joined")
     .then(res => res.json())
     .then((data) => {
-        setJoined(data);
-        setResults(data);
+        const filteredData =data.filter((item) => item.user_id === user?.id)
+        setJoined(filteredData);
+        setResults(filteredData);
     })
-}, [])
+    .catch((err) => console.error('Error fetching:', err))
+}, [user])
 
 return(
     <>

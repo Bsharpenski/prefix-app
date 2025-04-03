@@ -12,7 +12,7 @@ export default function Login() {
     };
 
 
-    const {isLoggedIn, setIsLoggedIn} =useContext(AuthContext)
+    const {isLoggedIn, setIsLoggedIn, setUser, user} =useContext(AuthContext)
     const [formData, setFormData] = useState({
         username: '',
         password: '',
@@ -44,6 +44,7 @@ export default function Login() {
             if (user) {
                 alert(`Logged in as ${user.first_name}`)
                 setIsLoggedIn(true);
+                setUser(user)
                 navigate('/myinv');
             } else {
                 alert('Invalid credentials')

@@ -6,7 +6,7 @@ import {AuthContext} from '../Login/authcontext.jsx'
 import './navbar.css'
 
 export default function Navbar() {
-    const {isLoggedIn, setIsLoggedIn} =useContext(AuthContext)
+    const {isLoggedIn, setIsLoggedIn, setUser, user} =useContext(AuthContext)
     const navigate = useNavigate()
     const handleNavigation = (path) => {
         navigate(path);
@@ -14,6 +14,7 @@ export default function Navbar() {
 
     const handleLogout = () => {
         setIsLoggedIn(false);
+        setUser(null);
         navigate('/');
     };
 
@@ -24,6 +25,7 @@ export default function Navbar() {
                 YourGameStore
             </h1>
             <ul id='btn-list'>
+                <li><span>Hello, {user?.first_name || 'Guest' }</span></li>
                 <li><button className='nav-btn' onClick={() => handleNavigation('/')}>Home</button></li>
                 <li><button className='nav-btn' onClick={() => handleNavigation('/all')}>All Inventory</button></li>
                 <li><button className='nav-btn' onClick={() => handleNavigation('/myinv')}>My Inventory</button></li>
