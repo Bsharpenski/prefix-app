@@ -1,8 +1,22 @@
-#product-container{
+.product-container{
     list-style: none;
-    display:inline-block;
+    display: inline-block;
     border: 2px solid white;
     padding:20px;
-    margin: 5%;
-    max-width: 200px;
+    margin: 10px;
+    width: 200px;
+    height: 300px;
+    height:12rem;
+    background-color: rgba(15, 125, 153, 0.767);
+    border-radius: 15px;
+    overflow-y: scroll;
+    scrollbar-color: rgba(128, 128, 128, 0.205) transparent; 
+    scrollbar-width: thin;
+    text-align: left;
+}
+
+.cardnames{
+    text-decoration: underline;
+    font-weight: 700;
+    color: rgb(240, 107, 240);
 }

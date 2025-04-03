@@ -1,3 +1,4 @@
+import './myinv.css'
 import {useEffect, useState} from 'react'
 
 export default function Myinv() {
@@ -16,8 +17,8 @@ useEffect(() => {
 return(
     <>
         <div>
-            <h2>All stores inventory</h2>
-            <table>
+            <h2>My stores inventory</h2>
+            <table >
                 <thead>
                     <tr>
                         <th>Manager_ID</th>

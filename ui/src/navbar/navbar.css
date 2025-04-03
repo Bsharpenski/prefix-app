@@ -1,12 +1,15 @@
 .navbar{
     display: flex;
     flex-wrap: wrap;
-    
+    background-color: rgb(70, 70, 70);
+    width: 100%;
+    margin:0 0 5px 0;
+    text-align: center;
 }
 
 #btn-list{
     list-style: none;
     display:flex;
     flex-direction: row;
-    margin-top: 5%;
+    margin: 4% 4% 0 auto;
 }

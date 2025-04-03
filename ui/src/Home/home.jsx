@@ -17,21 +17,24 @@ useEffect(() => {
 return(
 <>
     <div>
-        <input>
+        <input className='txtbox' placeholder='Search by product name'>
         </input>
         <h2>Our game products</h2>
+        
         <ul >
             {items.map( item => (
-                <div id='product-container'>
-                    <div key={item.id}>
-                      <li> {item.item_name}</li>
-                      <li> {item.description}</li>
-                      <li>  Product ID: {item.id}</li>
-                    </div>
+                <div className='product-container' key={item.id}>
+                    <li className='cardnames'> Name:</li>
+                    <li> {item.item_name}</li>
+                    <li className='cardnames'>  Product ID:</li>
+                    <li> {item.id}</li>
+                    <li className='cardnames'> Description:</li>
+                    <li> {item.description}</li>
                 </div>
             ))}
             
         </ul>
+        
     </div>
 </>
 )

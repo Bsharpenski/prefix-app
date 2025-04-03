@@ -6,6 +6,7 @@ import Allinv from './Allinv/allinv.jsx'
 import Myinv from './MyInv/Myinv.jsx'
 import Login from './Login/login.jsx'
 import Navbar from './navbar/navbar.jsx'
+import Signup from './Login/signup.jsx'
 
 function App() {
   
@@ -18,6 +19,7 @@ function App() {
         <Route path='/all' element={<Allinv/>}/>
         <Route path='/myinv' element={<Myinv/>}/>
         <Route path='/login' element={<Login/>}/>
+        <Route path='/signup' element={<Signup/>}/>
       </Routes>
     </>
   )
