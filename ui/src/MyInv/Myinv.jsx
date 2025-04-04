@@ -2,6 +2,7 @@ import './myinv.css'
 import {useEffect, useState, useContext} from 'react'
 import {AuthContext} from '../Login/authcontext.jsx'
 import HandleDelete from './removeitem.jsx'
+import HandleEdit from './edititem.jsx'
 import {useNavigate} from 'react-router-dom';
 
 export default function Myinv() {
@@ -15,6 +16,7 @@ const navigate = useNavigate()
     };
 
 useEffect(() => {
+    if (!user) return;
     fetch("http://localhost:3001/joined")
     .then(res => res.json())
     .then((data) => {
@@ -54,8 +56,8 @@ return(
                     <td>{row.item_name}</td>
                     <td>{row.description}</td>
                     <td>{row.quantity}</td>
-                    <td></td>
-                    <td><HandleDelete id={row.id}/></td>
+                    <td><HandleEdit id={row.id}/></td>
+                    <td><HandleDelete id={row.id} currentData={row}/></td>
                     </tr>
                     ))}
                 </tbody>
