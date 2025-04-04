@@ -7,6 +7,7 @@ import Myinv from './MyInv/Myinv.jsx'
 import Login from './Login/login.jsx'
 import Navbar from './navbar/navbar.jsx'
 import Signup from './Login/signup.jsx'
+import Additem from './MyInv/additem.jsx'
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path='/myinv' element={<Myinv/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/signup' element={<Signup/>}/>
+        <Route path='/additem' element={<Additem/>}/>
       </Routes>
     
     </>

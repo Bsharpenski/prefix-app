@@ -1,11 +1,18 @@
 import './myinv.css'
 import {useEffect, useState, useContext} from 'react'
 import {AuthContext} from '../Login/authcontext.jsx'
+import HandleDelete from './removeitem.jsx'
+import {useNavigate} from 'react-router-dom';
 
 export default function Myinv() {
 const {user} =useContext(AuthContext)
 const [joined, setJoined] = useState([]);
 const [results, setResults] = useState([]);
+
+const navigate = useNavigate()
+    const handleNavigation = (path) => {
+        navigate(path);
+    };
 
 useEffect(() => {
     fetch("http://localhost:3001/joined")
@@ -22,6 +29,7 @@ return(
     <>
         <div>
             <h2>My stores inventory</h2>
+            <button onClick={() => handleNavigation('/additem')}>Add Item</button>
             <table >
                 <thead>
                     <tr>
@@ -32,6 +40,8 @@ return(
                         <th>Item_Name</th>
                         <th>Description</th>
                         <th>Quantity</th>
+                        <th>Edit Item</th>
+                        <th>Delete</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -44,6 +54,8 @@ return(
                     <td>{row.item_name}</td>
                     <td>{row.description}</td>
                     <td>{row.quantity}</td>
+                    <td></td>
+                    <td><HandleDelete id={row.id}/></td>
                     </tr>
                     ))}
                 </tbody>
